@@ -1,0 +1,23 @@
+template(name="TestDataDocs")
+	each dataAddedPackages
+		div
+			div
+				h4 _id - {{_id}}
+			div
+				h4 description :
+				+with description
+					p title - {{title}}
+					p packageName - {{packageName}}
+					p orgName - {{orgName}}
+					p readme - {{readme}}
+			div
+				h4 packageVersion : {{packageVersion}}
+			div
+				h4 changelog : {{changelog}}
+			div
+				h4 patches:
+				each patches
+					+with this
+						p version - {{version}}
+						p changelog - {{changelog}}
+
