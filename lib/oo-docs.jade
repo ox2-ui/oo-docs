@@ -20,4 +20,19 @@ template(name="TestDataDocs")
 					+with this
 						p version - {{version}}
 						p changelog - {{changelog}}
+			div
+				h3 PackageApiTypes
+				div
+					each dataPackageApiTypes
+						div
+							p apiType - {{apiType}}
+							p apiDocs - {{apiDocs}}
+							h3 PackageApi
+							each dataPackageApi
+								div
+									p apiName - {{apiName}}
+									p apiValue - {{apiValue}}
+									p description - {{description}}
+
+
 
