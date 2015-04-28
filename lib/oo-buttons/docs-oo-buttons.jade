@@ -1,0 +1,28 @@
+template(name="ooButtonDocs")
+  +ooNativeScroller oo="push"
+    h1 docs
+    h4 Background Color
+    each backColors
+      button.js-selectBackColor(btn="neutral-light push-left push-bottom outline tiny" data-color="{{this}}") {{this}}
+      i.swatch(oo-Color="back:{{this}}")
+    h4 Size
+    each buttonSize
+      button.js-selectButtonSize(btn="neutral-light push-left push-bottom outline tiny" data-size="{{this}}") {{this}}
+    h4 Shape
+    each buttonShape
+      button.js-selectButtonShape(btn="neutral-light push-left push-bottom outline tiny" data-shape="{{this}}") {{this}}
+    h4 Color
+    each buttonColors
+      button.js-selectbuttonColors(btn="neutral-light push-left push-bottom outline tiny" data-color="{{this}}") {{this}}
+      i.swatch(oo-Color="back:{{this}}")
+    .ooDocs-component-wrapper(oo-Color="back:{{currentBackColor}}")
+      button(btn="{{params}}") Some
+    .ooDocs-component-wrapper(oo-Color="back:{{currentBackColor}}")
+      button(btn="{{params}}") Some
+      button(btn="{{params}}") Some
+      button(btn="{{params}}") Some
+    +markdown
+      ```js
+        div(oo-Color="back:{{currentBackColor}}")
+          button(btn="{{params}}") Some
+      ```
