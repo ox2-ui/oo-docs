@@ -19,6 +19,13 @@ template(name="ooButtonDocs")
           +with this
             p version - {{version}}
             p changelog - {{changelog}}
+      div
+        each dataPackageApiTypes
+          h4 {{apiType}}
+          h7 {{apiDocs}}
+          each dataPackageApi
+            button.js-setApiValue(btn="neutral-light push-left push-bottom outline tiny" data-api="{{apiValue}}") {{apiName}}
+            //- p description: {{description}}
     h1 docs
     h4 Background Color
     each backColors
@@ -43,5 +50,11 @@ template(name="ooButtonDocs")
     +markdown
       ```js
         div(oo-Color="back:{{currentBackColor}}")
+          button(btn="{{params}}") Some
+      ```
+      ```js
+        div(oo-Color="back:{{currentBackColor}}")
+          button(btn="{{params}}") Some
+          button(btn="{{params}}") Some
           button(btn="{{params}}") Some
       ```
