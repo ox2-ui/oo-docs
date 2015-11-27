@@ -11,14 +11,14 @@ var C = 'client';
 var CS = [C, S];
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.1');
+  api.versionsFrom('1.2.0.2');
   // Core
   api.use([
     'templating', 'http'
     ]);
   // 3rd party
   api.use([
-    'lauricio:less-autoprefixer@1.0.15','mquandalle:jade@0.4.1', 'mousetrap:mousetrap@1.4.6_1'
+    'lauricio:less-autoprefixer@2.5.0_3','mquandalle:jade@0.4.1', 'mousetrap:mousetrap@1.4.6_1'
     ]);
   // Initialize docs object
   api.addFiles('lib/oo-docs-init.js', S);
